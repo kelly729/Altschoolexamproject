@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,100&family=Open+Sans:wght@500&family=Poppins:wght@100&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+:root{
+  --alabaster:#F6F4E8;
+  --alice-Blue:#E9EEF2;
+  --floral-whte:#F8F7EE;
+  --yale-blue:#134A9C;
+  --light-steal-blue:#BBD3F7;
+  --gunmetal:#2A3344;
+  --carmine:#8447FF;
+  --main-bg:#ECEDEF;
+  --boxshadow: 0px 17px 15px -3px rgba(0,0,0,0.1);
+}
+body{
+  background: var(--main-bg);
+}
+/* GLOBAL CLASSES */
+.btn-cont{
+  background: var(--carmine);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+h4{
+  text-align: center;
+  margin-top: 15rem;
+  color: var(--carmine);
+  font-size: 40px;
+}
+
+/* GLOBAL CLASSES */
+/* HOME */
+.main-container{
+  margin: 10rem 7.3rem;
+  position: relative;
+}
+.content{
+  display: flex;
+}
+.icons{
+  margin-top: 2.5rem;
+}
+.icons ul li{
+  font-size: 1.4rem;
+  color: var(--carmine);
+  list-style: none;
+}
+.home-cont{
+  margin-left: 2rem;
+}
+.home-cont h2{
+  color: var(--carmine);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+}
+.home-cont p{
+  color: var(--gunmetal);
+  font-size: 14px;
+  margin-bottom: 2rem;
+
+}
+.hero-img{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* HOME */
+/* USERS */
+.user-cont{
+  margin: 5rem 5rem;
+}
+.user-cont h1{
+  text-align: center;
+  font-weight: bold;
+  color: var(--carmine);
+  margin-top: 1rem;
+}
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 10px;
+  margin-top: 2rem;
+}
+.submain{
+  display: flex;
+  background: var(--floral-whte);
+  padding: 10px;
+  transition: 2s;
+ 
+}
+.submain:hover{
+  box-shadow: var(--boxshadow);
+
+}
+.img-sc {
+  margin-left: 1rem;
+}
+.img-sc img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+.list-item{
+  margin-left: 1.3rem;
+}
+.list-item h2{
+  color:var(--yale-blue);
+  margin-bottom:10px;
+}
+.list-item li{
+  list-style: none;
+  color: var(--gunmetal);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.user-btn{
+  padding: 5px 10px;
+  color: var(--floral-whte);
+  border: none;
+  background: var(--carmine);
+  margin-bottom: 10px;
+}
+
+/* USERS */
+/* PAGINATION */
+.page-main{
+  display: flex;
+  justify-content: center;
+}
+.page-main ul a{
+  display: inline-block;
+  margin: 0 5px;
+  background: var(--carmine);
+  color: var(--floral-whte);
+  padding: 5px 15px;
+}
+.page-main a.active{
+  background: var(--yale-blue);
+}
+/* SINGLEUSER */
+.single-main{
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+}
+.sub-single{
+  background: var(--carmine);
+}
+.img-sec{
+  text-align: center;
+  margin-top: 1rem;
+ 
+}
+.img-sec img{
+  border-radius: 50%;
+}
+.img-sec h2{
+  color: white;
+  margin-top: 10px;
+}
+.img-sec ul li {
+  display: inline-block;
+  color:white;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+.cont{
+  background: var(--floral-whte);
+  padding: 1rem 1rem;
+ 
+  
+}
+.about{
+  margin-top: 4rem;
+  text-align: center;
+  margin: 10rem 5rem;
+}
+.about h2{
+  color: var(--carmine);
+  margin-bottom: 1rem;
+}
+/* SINGLEUSER */
+
+.sign{
+  margin-top: 10rem;
+  text-align: center;
+
+}
+.sign h2{
+  color: var(--gunmetal);
+}
+.sign button{
+  border: none;
+  margin-top: 2rem;
+  /* font-size: 1.5rem; */
+}
+.google{
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* PAGINATION */
+
+/* MOBILE */
+@media screen and (max-width:480px) {
+  /* HOME */
+.main-container{
+  margin:2rem 2rem;
+}
+.content{
+  flex-direction: column-reverse;
+  
+}
+.home-cont{
+  text-align: center;
+}
+.hero-img{
+  top: 380px;
+  
+}
+.hero-img img{
+  width: 250px;
+}
+.icons{
+  text-align: center;
+}
+.icons ul li{
+  display: inline-block;
+  margin: 1rem;
+}
+
+/* HOME */
+/* USERS */
+.user-cont{
+  /* display: block; */
+  margin: 5rem 2rem;
+}
+.main{
+  display: block;
+}
+.submain{
+  margin-top: 1rem;
+  overflow: scroll;
+}
+.page-main{
+  margin-top: 3rem;
+  
+}
+.page-main ul a{
+  padding: 5px 10px;
+  margin: 0 0 0 5px;
+}
+/* USERS */
+
+  
+}
+/* MOBILE */
+
+/* TAB */
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+  .home-cont{
+    text-align: center;
+  }
+  .hero-img{
+    margin-top: 8rem;
+  }
+.main{
+  grid-template-columns: 1fr 1fr ;
+  
+}
+.user-cont{
+  margin: 5rem 2rem;
+}
+.page-main{
+  margin-top: 4rem;
+}
+
+
+  
+}
+
+/* TAB */
