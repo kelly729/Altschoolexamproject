@@ -14,7 +14,7 @@ import { ErrorBoundary ,useErrorHandler} from 'react-error-boundary';
 import { FallBack } from './components/FallBack';
 import { SharedLayout } from './components/sharedLayout';
 import { Signup } from './components/SignUp';
-import { AuthContextProvider } from './context/AuthContext';
+
  
 function App() {
   const [results, setResults] = useState([]);
@@ -40,7 +40,6 @@ function App() {
   }, []);
   return (
      <>
-    <AuthContextProvider>
     <ErrorBoundary FallBack={FallBack}>
      {loading?<Loading/>:<SharedLayout>
      <Routes>
@@ -56,7 +55,7 @@ function App() {
      
        }
        </ErrorBoundary>
-    </AuthContextProvider>
+  
      
      </>
    
