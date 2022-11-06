@@ -10,10 +10,12 @@ import { Navbar } from './components/Navbar';
 import { Loading } from './components/Loading';
 import { useEffect,useState } from 'react';
 import axios from "axios";
-import { ErrorBoundary ,useErrorHandler} from 'react-error-boundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import { FallBack } from './components/FallBack';
 import { SharedLayout } from './components/sharedLayout';
 import { Signup } from './components/SignUp';
+import { AuthContextProvider } from './context/context';
+import { ErrorPage } from './components/Error';
 
  
 function App() {
@@ -40,13 +42,17 @@ function App() {
   }, []);
   return (
      <>
-    <ErrorBoundary FallBack={FallBack}>
+     
+    <ErrorBoundary>
+    <AuthContextProvider>
      {loading?<Loading/>:<SharedLayout>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/People' element={<People results={results}/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/error' element={<ErrorPage/>}/>
+      
       <Route path='*' element={<h4>page not found</h4>}/>
 
       <Route path='/person/:id' element={<SingelPerson results={results} />}/>
@@ -54,7 +60,9 @@ function App() {
      </SharedLayout>
      
        }
+        </AuthContextProvider>
        </ErrorBoundary>
+      
   
      
      </>

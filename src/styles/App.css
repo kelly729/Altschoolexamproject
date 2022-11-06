@@ -70,6 +70,18 @@ h4{
   right: 0;
   top: 0;
 }
+.error-boundary{
+  margin-top: 8rem;
+  text-align: center;
+}
+.error-boundary h2{
+  margin-bottom: 3rem;
+}
+.error-boundary a{
+  border: none;
+  /* margin-top: 3rem; */
+}
+.
 
 /* HOME */
 /* USERS */

@@ -5,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai"
 import { useState } from 'react';
 // import { useRef } from 'react';
 import "../styles/navbar.css"
+import { UserAuth } from '../context/context';
 
 export const Navbar = () => {
   const [isClicked,setIsClicked]=useState(false)
@@ -12,6 +13,7 @@ export const Navbar = () => {
   const handleClick=()=>{
     setIsClicked(true)
     
+    const{user,logOut}=UserAuth()
 
   }
   return (
@@ -26,7 +28,8 @@ export const Navbar = () => {
        <li> <NavLink  to="/">Home</NavLink></li>
        <li> <NavLink  to="/People">Users</NavLink></li>
        <li ><NavLink  to="/about">About</NavLink></li>
-       <li ><NavLink  to="/Signup">Sign up</NavLink></li>
+       <li ><NavLink  to="/error">Error page</NavLink></li>
+       <li ><NavLink  to="/Signup">SignIn</NavLink></li>
        </ul>
             
       </nav>
